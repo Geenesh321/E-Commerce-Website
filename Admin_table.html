@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Registration.css">
+    <script src="Admin.js" defer></script>
+</head>
+
+<body>
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Brand</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Product Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>Brand 1</td>
+                <td>RS 10.00</td>
+                <td>5</td>
+                <td><img src="Photo/Logo.png" alt="Product 1"></td>
+                <td>
+                    <button class="edit-btn" onclick="window.location.href='Admin.html'">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>Brand 2</td>
+                <td>RS 20.00</td>
+                <td>3</td>
+                <td><img src="Photo/Logo.png" alt="Product 2"></td>
+                <td>
+                    <button class="edit-btn" onclick="window.location.href='Admin.html'">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<script>
+const deleteButtons = document.querySelectorAll('.delete-btn');
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const row = event.target.closest('tr');
+    const confirmDelete = confirm('Are you sure you want to delete this product?');
+    if (confirmDelete) {
+      row.remove();
+    }
+  });
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
