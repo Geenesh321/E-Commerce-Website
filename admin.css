@@ -17,8 +17,7 @@ body {
 }
 
 .container {
-  position: fixed;
-  max-width: 1170px;
+  max-width: 700px;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
@@ -45,13 +44,14 @@ body {
 
 .content form .user-details {
   display: flex;
-  gap: 155px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 20px 0 12px 0;
 }
 
 form .user-details .input-box {
   margin-bottom: 15px;
-  width: auto;
+  width: calc(100% / 2 - 20px);
 }
 
 form .input-box span.details {
@@ -62,8 +62,7 @@ form .input-box span.details {
 
 .user-details .input-box input {
   height: 45px;
-  max-width: 300px;
-  width: 130%;
+  width: 100%;
   outline: none;
   font-size: 16px;
   border-radius: 5px;
@@ -86,7 +85,6 @@ form .gender-details .gender-title {
 form .category {
   display: flex;
   width: 80%;
-  max-width: 460px;
   margin: 14px 0;
   justify-content: space-between;
 }
@@ -125,7 +123,6 @@ form .button {
 
 form .button input {
   height: 100%;
-  max-width: 665px;
   width: 100%;
   border-radius: 5px;
   border: none;
@@ -173,39 +170,147 @@ form .button input:hover {
   }
 }
 
-.SignUp-Image {
+.Product-Image {
   font-weight: 500;
 }
 
 input[type="file"] {
   margin-top: 0%;
-  width: 100px;
-  height: 33.2px;
+  width: 220px;
+  height: 30px;
   border: 1px solid #000000;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: #dcd3d3;
   padding: 5px;
   font-size: 14px;
-  color: #000000;
-  margin-left: 110px;
+  color: #444;
 }
 
 .image-upload-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 225px;
-  width: 320px;
+  height: 300px;
+  width: 300px;
   background-color: #eee;
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
-  margin-top: -15px;
-  border-radius: 20px;
 }
 
-.move {
-  position: absolute;
-  margin-top: -28%;
-  margin-left: 61%;
+form .button-Add {
+  height: 40px;
+  width: 75%;
+  display: inline-block;
 }
+
+form .button-Add input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button-Add input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+form .button-Back{
+  display: inline-block;
+}
+form .button-Back a {
+  padding: 7px 48px;
+}
+
+form .button-Back a{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button-Back a:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+/* END */
+
+/* Admin Panal Table */
+.product-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin-top: -22%;
+  text-align: left;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+}
+
+.product-table td img {
+  width: 80%;
+  height: 50px;
+  object-fit: cover;
+}
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+  margin-left: 10px;
+}
+.Admin_container {
+  max-width: 95%;
+  width: 100%;
+  background-color: #ffffff00;
+  padding: 23% 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.Admin_container .Admin_title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  top: -329px;
+}
+.Admin_container .Admin_title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+/* END */

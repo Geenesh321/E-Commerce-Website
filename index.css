@@ -38,14 +38,23 @@
   font-size: 20px;
   font-weight: bold;
 }
-
+.searchbar{
+  display: flex;
+  
+}
+.navbar-search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
 .navbar-search input[type="text"] {
   height: 30px;
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 3px;
   font-size: 20px;
-  margin-right: 50px;
+  margin-right: -10px;
 }
 
 /* Icons styles */
@@ -76,12 +85,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 80px);
 }
 
 h1 {
   color: #f8f8f8;
   font-size: 70px;
   text-align: center;
-  margin-top: -140%;
+  margin-top: -100%;
+}
+/* Product Page */
+.product_Heading{
+  font-size: 25px;
+  font-family: Gabriela;
 }
