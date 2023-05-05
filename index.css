@@ -7,13 +7,15 @@
 
 /* Navigation bar styles */
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #C8BABA; */
   background-color: Black;
   height: 80px;
   padding: 0 20px;
+  z-index: 2;
 }
 
 /* Logo styles */
@@ -38,16 +40,19 @@
   font-size: 20px;
   font-weight: bold;
 }
-.searchbar{
+
+.searchbar {
   display: flex;
-  
+
 }
-.navbar-search{
+
+.navbar-search {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
 }
+
 .navbar-search input[type="text"] {
   height: 30px;
   padding: 10px;
@@ -62,13 +67,15 @@
   display: flex;
 }
 
-.navbar-icons a, .bx  {
+.navbar-icons a,
+.bx {
   margin-left: 25px;
   color: #ffffff;
   font-size: 30px;
 }
 
-.navbar-icons a i , .bx{
+.navbar-icons a i,
+.bx {
   align-items: center;
   height: 40px;
   width: 40px;
@@ -93,28 +100,95 @@ h1 {
   text-align: center;
   margin-top: -100%;
 }
-/* Product Page */
+
+/* Dropdown Button */
+.dropbtn {
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #000000;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #000000;
+}
+
+/* Trend Page */
 /* Product Heading */
-.product_Heading{
-  margin-left: 70vh;
+.product_Heading {
+  display: flex;
+  justify-content: center;
   font-size: 25px;
   font-family: Gabriela;
   font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+.prods {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20PX;
 }
 
 /* Product Card */
 .product-card {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  margin-left: 17px;
+  width: 300PX;
 }
 
 .product-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.2s ease-in-out;
+  height: 250px;
+  width: 265px;
+  margin-bottom: 18px;
 }
 
 .product-card img:hover {
@@ -122,33 +196,64 @@ h1 {
 }
 
 .product-card .product-name {
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 .product-card .product-price {
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   color: #0077be;
   margin-bottom: 10px;
+
 }
 
-.product-card .add-to-cart {
-  background-color: #0077be;
+button {
+  position: relative;
+  background-color: rgb(230, 34, 77);
+  border-radius: 5px;
+  box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+  padding: 6px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 132px;
+  height: 35px;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.product-card .add-to-cart:hover {
-  background-color: #005ea6;
+button::before {
+  content: "";
+  background-color: rgb(248, 50, 93);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
 }
 
-/* Adjust Product Size */
-.product-card img {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 10px;
+button:hover::before {
+  width: 100%;
+}
+
+/* END Button */
+
+/* Our Product */
+.trend {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20PX;
+  background-color: rgba(0, 255, 255, 0.248);
 }

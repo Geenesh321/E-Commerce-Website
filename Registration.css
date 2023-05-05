@@ -173,6 +173,7 @@ form .button input:hover {
   }
 }
 
+/*  */
 .SignUp-Image {
   font-weight: 500;
 }
@@ -181,13 +182,10 @@ input[type="file"] {
   margin-top: 0%;
   width: 100px;
   height: 33.2px;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  background-color: #dcd3d3;
   padding: 5px;
   font-size: 14px;
   color: #000000;
-  margin-left: 110px;
+  margin-left: 0px;
 }
 
 .image-upload-container {
@@ -201,9 +199,15 @@ input[type="file"] {
   background-position: center;
   margin-bottom: 20px;
   margin-top: -15px;
-  border-radius: 20px;
+  border-radius: 7px;
+}
+.label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: -100px;
 }
 
+/*  */
 .move {
   position: absolute;
   margin-top: -28%;
