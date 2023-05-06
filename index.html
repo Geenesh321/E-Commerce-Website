@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -31,7 +32,7 @@
     </ul>
     <div class="navbar-search">
       <form action="#" method="GET" class="searchbar">
-        <input type="text" placeholder="Search..."><i class="bx bx-search-alt-2"></i>
+        <input type="text" id="search-item" placeholder="Search..." onkeyup="search()"><i class="bx bx-search-alt-2"></i> 
       </form>
     </div>
     <div class="navbar-icons">
@@ -51,7 +52,7 @@
   </div>
 
   <!-- Product Card -->
-  <div class="prods">
+  <div class="product-list" id="product-list">
     <div class="product-card">
       <img src="./Photo/test 1.jpg" alt="Product Image">
       <h3 class="product-name">Audi A8</h3>
