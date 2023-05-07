@@ -167,7 +167,7 @@ h1 {
   margin-top: 35px;
 }
 
-.prods {
+.product-list {
   display: flex;
   flex-flow: wrap;
   align-items: center;
